@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MPP-MPI Assembly Facility</title>
+    <meta name="description" content="Welcome to the RPC Gas Gap Pre-Production and Certification Phase at the Max Planck Institut für Physik - Werner Heisenberg Institute.">
+    <title>RPC Gas Gap Pre-Production and Certification Phase</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -35,6 +36,9 @@
             display: inline;
             margin-right: 10px;
         }
+        nav ul li:last-child {
+            margin-right: 0;
+        }
         nav ul li a {
             text-decoration: none;
             color: #0066cc;
@@ -55,10 +59,45 @@
             font-style: italic;
             color: #555;
         }
-        @media (max-width: 600px) {
-            nav ul li {
-                display: block;
-                margin: 10px 0;
+        .photo-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        .photo-container > div {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .photo-container .vertical-stack {
+            justify-content: space-between;
+        }
+        .photo-container img {
+            width: 100%;
+            height: auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+        .photo-container > div:last-child img {
+            width: 100%;
+            height: auto;
+            max-height: 660px; /* Adjust this value as needed */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+        }
+        .developer-info {
+            margin-top: 20px;
+            font-size: 0.9em;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            .photo-container {
+                flex-direction: column;
+            }
+            .photo-container > div {
+                margin-bottom: 10px;
             }
         }
     </style>
@@ -66,30 +105,39 @@
 <body>
     <div class="container">
         <header>
-            <h1>MPP-MPI Assembly Facility</h1>
+            <h1>RPC Gas Gap Pre-Production and Certification Phase</h1>
+            <p class="institute-info">Max Planck Institut für Physik - Werner Heisenberg Institute<br>
+            Boltzmannstr. 8 - 85748 Garching, Germany</p>
+            <p class="centered-text">Welcome to the RPC Gas Gap Pre-Production and Certification Page</p>
         </header>
         
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="MPP-MPI-MODULE-00.html">MPP-MPI-MODULE-00</a></li>
-                <li><a href="MPP-MPI-MODULE-01.html">MPP-MPI-MODULE-01</a></li>
-                <li><a href="MPP-MPI-MODULE-02.html">MPP-MPI-MODULE-02</a></li>
+                <li><a href="index.html" aria-label="Home">Home</a></li>
+                <li><a href="MPP-MPI_Assembly_Facility.html" aria-label="MPP-MPI Assembly Facility">MPP-MPI Assembly Facility</a></li>
+                <li><a href="MIRION_Assembly_Facility.html" aria-label="MIRION Assembly Facility">MIRION Assembly Facility</a></li>
+                <li><a href="PTS_Assembly_Facility.html" aria-label="PTS Assembly Facility">PTS Assembly Facility</a></li>
             </ul>
         </nav>
         
         <main>
-            <p>Select a module to view its assembly and certification status:</p>
-            <ul>
-                <li><a href="MPP-MPI-MODULE-00.html">MPP-MPI-MODULE-00</a></li>
-                <li><a href="MPP-MPI-MODULE-01.html">MPP-MPI-MODULE-01</a></li>
-                <li><a href="MPP-MPI-MODULE-02.html">MPP-MPI-MODULE-02</a></li>
-            </ul>
+            <p class="centered-text">Select an assembly facility to view its information</p>
+            <div class="photo-container">
+                <div class="vertical-stack">
+                    <img src="RPC_Assembly_pic001.jpeg" alt="Technicians working at MIRION Assembly Facility">
+                    <img src="RPC_Assembly_pic003.jpeg" alt="Equipment setup at PTS Assembly Facility">
+                </div>
+                <div>
+                    <img src="RPC_Assembly_pic002.jpeg" alt="Inside view of MPP-MPI Assembly Facility">
+                </div>
+            </div>
         </main>
         
         <footer>
             <p>&copy; 2024 RPC Gas Gap Pre-Production and Certification Phase. All rights reserved.</p>
+            <p class="developer-info">Developed by Dr. Francesco Fallavollita. Contact: <a href="mailto:fallavol@mpp.mpg.de">fallavol@mpp.mpg.de</a></p>
         </footer>
     </div>
 </body>
 </html>
+
